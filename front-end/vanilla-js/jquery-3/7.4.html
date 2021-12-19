@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+
+<title>7.4 Търсене на елементи от едно ниво siblings()</title>
+
+<style type="text/css">
+  body { width: 500px; }
+  body, div, p {
+    padding: 10px; margin: 10px;
+    border: 2px solid #ccc;
+  }
+</style>
+
+<script src="jquery-3.3.1.min.js"></script>
+
+<script>
+
+$(function() {
+
+  $( 'p' ).click(function(){
+
+    $( '*' ).css( 'border-color', '#ccc' );
+
+    $( this )
+      .css('border-color', '#f00')
+    .siblings( 'p' )
+        .css( 'border-color', '#f0f' );
+  });
+
+});
+</script>
+</head>
+<body>
+
+  <h1>7.4 Търсене на елементи от едно ниво siblings()</h1>
+
+  <p>Outside div</p>
+
+  <div>
+    <p>Inside div</p>
+    <p>Inside div</p>
+    <p>Inside div</p>
+  </div>  
+  <div>
+    <p>Inside div</p>
+    <p>Inside div</p>
+    <p>Inside div</p>
+  </div>
+  
+  <p>Outside div</p>
+
+</body>
+</html>

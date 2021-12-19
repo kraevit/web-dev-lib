@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+<head>
+<title>7.2 Навигация по елементите с помощта на next() prev()</title>
+
+<style type="text/css">
+  div {
+    width: 400px; padding: 10px;
+    margin: 10px; border: 2px solid #ccc;
+  }
+
+  p {
+    border: 2px solid #ccc; padding: 0 5px;
+  }
+
+  #main {
+    background-color: #ddd;
+  }
+</style>
+
+<script src="jquery-3.3.1.min.js"></script>
+
+<script type="text/javascript">
+
+$(function() {
+
+  $( '#main' ).next().css( 'border-color', '#f00' );
+
+  $( '#main' ).nextAll().css( 'color', '#f00' );
+
+  $( '#main' ).prev().css( 'border-color', '#0c0' );
+
+  $( '#main' ).prevAll().css( 'color', '#0c0' );
+
+});
+
+</script>
+</head>
+<body>
+
+<h1>7.2 Навигация по елементите с помощта на next() prev()</h1>
+
+<div>
+
+  <p>Inside div</p>
+  
+  <p>Inside div</p>
+  
+  <p>Inside div</p>
+  
+  <p id="main">Inside div ( id = main ) </p>
+  
+  <p>Inside div</p>
+  
+  <p>Inside div</p>
+  
+  <p>Inside div</p>
+
+</div>
+
+<p>Outside div</p>
+
+<p>Outside div</p>
+
+</body>
+</html>

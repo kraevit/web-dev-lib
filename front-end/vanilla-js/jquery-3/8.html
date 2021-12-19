@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Глава 8. Обработка на събития</title>
+</head>
+<body>
+
+<h1>Глава 8. Обработка на събития</h1>
+<pre>
+// depracated:
+  load(), unload(),
+  bind(), unbind()
+
+// allowed
+// vanilla: window.onbeforeunload = 
+
+// https://github.com/swisnl/jQuery-contextMenu/
+
+blur()
+change()
+click()
+contextmenu
+dblclick()
+error()
+focus()
+focusin()
+focusout()
+keypress()
+keyup()
+keydown()
+
+mouseenter()
+mouselevave()
+mousemove()
+mouseout()
+mouseover()
+mouseup()
+
+// trigger() example
+
+$("div:first").click(function (){
+
+  alert("click");
+
+});
+
+$("div:last").mouseover(function (){
+
+  $("div:first").trigger("click");
+
+})
+
+</pre>
+
+</body>
+</html>

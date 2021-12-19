@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html" charset="utf-8"> 
+   <!-- Important here encoding MUST BE utf-8 ALSO LIKE json.php file -->
+   
+   <style type="text/css">
+      div {
+         width: 250px;
+         height: 100px;
+         border: 2px solid #470;
+         overflow: auto;
+      }
+   </style>
+
+   <title>9.2.5 Получаване на JSON данни</title>
+</head>
+<body>
+
+   <h1>9.2.5 Получаване на JSON данни</h1>
+
+   <div id="res"></div>
+
+   <button id="load">JSON</button>
+
+   <button id="clear">Clear</button>
+
+   <script src="../jquery-3.3.1.min.js"></script>
+
+   <script>
+      
+         // 9.2.5 Получаване на JSON данни
+
+         $(function (){
+
+            $('#load').click(function (){
+
+               $.getJSON('json.php', function(data, textStatus, jqXHR){
+
+                  var items = [];
+
+                  $.each(data, function(){
+
+                     items.push(item.country + ': ' + item.capital);
+
+                  });
+
+                  $('#res').html(items.join('<br>'));
+
+               });
+
+            });
+
+            $('#clear').click(function() {
+
+               $('#res').empty();
+               
+            });
+
+      });
+
+   </script>
+
+</body>
+</html>

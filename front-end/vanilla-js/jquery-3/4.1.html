@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+  
+  <meta charset="utf-8">
+  <title>4.1 Промяна на стойностите на CSS стойства</title>
+
+  <script src="jquery-3.3.1.min.js"></script>
+  <script>
+
+    $(function (){
+
+      var oldWidth = $( 'div' ).css( 'width' );
+
+      window.alert( oldWidth );
+
+      var newWidth = '120px';
+
+      $('div').css( 'width', newWidth );
+
+    });
+  </script>
+</head>
+<body>
+
+  <h1>4.1 Промяна на стойностите на CSS стойства</h1>
+    
+  <div>Hello, world!</div>
+
+</body>
+</html>

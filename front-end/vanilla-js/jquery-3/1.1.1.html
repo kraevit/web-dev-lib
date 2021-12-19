@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<title>Пример 1.1. Проста селекция</title>
+
+	<script 
+		type="text/javascript"
+		src="jquery-3.3.1.min.js">
+			
+		</script>
+
+	<script type="text/javascript">
+		
+		$( document ).ready( function (){
+
+			console.log( $('*').length );
+
+			console.log( $('*', document.body).length );
+
+		});
+
+	</script>
+</head>
+
+<body>
+
+	<h1>Пример 1.1. Проста селекция</h1>
+
+	<ul>
+		<li></li>
+	</ul>
+	<p></p>
+	<div></div>
+
+</body>
+</html>

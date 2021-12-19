@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<title>Пример 1.2. Избор с отчитане на йерархията</title>
+
+	<script 
+		type="text/javascript"
+		src="jquery-3.3.1.min.js">
+			
+		</script>
+
+	<script type="text/javascript">
+		
+		$( document ).ready( function (){
+
+			// $('fieldset input').css('border', '3px solid #f00');
+
+			// преки наследници 
+			
+			$('form >> input').css('border', '3px solid #f00');
+
+			// преходен + следващ
+
+			// ~ сестрински
+
+
+		});
+
+	</script>
+</head>
+
+<body>
+
+	<h1>Пример 1.2. Избор с отчитане на йерархията</h1>
+
+	<form>
+		<p>Firstname <input type="text" name="fname"></p>
+		<p>Lastname <input type="text" name="lname"></p>
+		<fieldset>
+			<p>Address <input type="text" name="address"></p>
+			<p>ZIP <input type="text" name="zip"></p>
+		</fieldset>
+	</form>
+
+</body>
+</html>

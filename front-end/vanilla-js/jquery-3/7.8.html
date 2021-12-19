@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<title>7.8 Метод not()</title>
+<style>
+  div {
+    width: 100px; height: 100px;
+    margin: 5px; float: left;
+    border: 3px double #369;
+  }
+</style>
+
+<script src="jquery-3.3.1.min.js"></script>
+
+<script type="text/javascript">
+
+  $(function() {
+
+    $( 'div' ).not( '.test, #third' ).css( 'background-color', '#00f' );
+
+  });
+
+</script>
+</head> 
+<body>
+
+<h1>7.8 Метод not()</h1>
+
+<div id="first">1</div>
+<div id="second" class="test">2</div>
+<div id="third">3</div>
+<div id="fourth">4</div>
+<div id="fift">5</div>
+<div id="sixth">6</div>
+
+</body>
+</html>

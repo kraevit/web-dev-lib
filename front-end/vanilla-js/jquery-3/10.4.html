@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>10.4 Функция unique()</title>
+
+  <script src="jquery-3.3.1.min.js"></script>
+  <script>
+      
+      $(function (){
+
+        var divs = $( 'div' ).get(); // 6
+        var dups = $( 'div.dups' ).get(); // 4
+        
+        var arr = $.merge(divs, dups);
+        console.log( 'Total: ' + arr.length ); // 9
+        
+        arr = $.unique(arr);
+        console.log( 'Unique: ' + arr.length ); // 6
+        
+      });
+
+  </script>
+</head>
+<body>
+  <h1>10.4 Функция unique()</h1>
+  
+  <div></div>
+  <div class="dup"></div>
+  <div class="dup"></div>
+  <div></div>
+  <div></div>
+  <div class="dup"></div>
+  
+</body>
+</html>

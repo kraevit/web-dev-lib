@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<title>Глава 1. CheatSheet</title>
+
+
+</head>
+
+<body>
+
+	<h1>Глава 1. Избиране на елементи. Селектори</h1>
+
+	<a href="https://api.jquery.com/category/selectors" target="_blank">https://api.jquery.com/category/selectors</a>
+
+<pre>
+
+console.log( $("*").length )
+
+console.log( $("*",document.body).length )
+
+$( "#div1" )
+
+$( "div" )
+
+$( ".text" )
+
+$( "form input" )
+
+$( "form >> input" )
+
+предходен + следващ
+
+~ сестрински елементи
+
+$( "tr:even" )
+
+$( "tr:odd" )
+
+$( "tr:first" )
+
+$( "tr:last" )
+
+$( "td:eq(2)" )
+
+$( "td:gt(3)" )
+
+$( "td:not(:gt(2))" )
+
+$( ":header" )
+
+$( "div:contains('Hello')" )
+
+$( "td:empty" )
+
+console.log( $(":visible", document.body).length )
+
+console.log( $(":hidden", document.body).length )
+
+:enabled 
+
+:disabled
+
+:input 
+
+:password
+
+selector[name="value"]  равно на =
+
+selector[name!="value"] неравно !=
+
+selector[name^="value"] започва с value ^=
+
+selector[name$="value"] завършва с value $=
+
+:checkbox
+
+:checked
+
+:selected
+
+</pre>
+
+</body>
+</html>

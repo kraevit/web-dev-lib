@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+<title>Получаване на данни от сървър с използване на POST заявка</title>
+<style type="text/css">
+	div {
+		width: 400px; height: 200px;
+		padding: 10px; margin: 10px;
+		border: 3px double #369;
+		overflow: auto;
+	}
+	</style>
+</head>
+<body>
+
+	<h1>Получаване на данни от сървър с използване на POST заявка</h1>
+
+	<div></div>
+
+	<button>Send POST query</button>
+
+	<button>Clear</button>
+
+
+	<script src="../jquery-3.3.1.min.js"></script>
+
+	<script>
+		
+   		// 9.2.2 Получаване на данни от сървър с използване на POST заявка
+
+         // $.post(url, [data], [success(data, textStatus, jqXHR)], [dataType])
+   		
+   		$(function() {
+
+   			$('button:first').click(function() {
+
+   				$.post(
+
+   					'post.php',
+
+   					{ 
+
+   						login: 'den', 
+
+   						password: '123456' 
+
+   					},
+
+   					function (data){
+
+   						$('div').text(data);
+
+   					}
+
+   				);
+
+   			});
+
+   			$('button:last').click(function() {
+
+   				$('div').empty();
+
+   			});
+
+   		});
+	</script>
+</body>
+</html>

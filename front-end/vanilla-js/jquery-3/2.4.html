@@ -1,0 +1,72 @@
+
+<!doctype html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<title>2.4 Метод val(): работа с атрибута value</title>
+
+	<script src="jquery-3.3.1.min.js"></script>
+	<script>
+		$(function (){
+
+			$('#button1').click(function(){
+
+				var value = $('#fname').val();
+
+				window.alert(value);
+
+			});
+
+			$('#button2').click(function(){
+
+				var value = $(':radio[name=os]:checked').val();
+
+				window.alert(value); 
+
+			});
+
+		});
+	</script>
+
+</head>
+<body>
+
+	<h1>2.4 Метод val(): работа с атрибута value</h1>
+
+	<div class="value">
+	  
+	  <input type="text" id="fname" value="Your Name">
+	  <button id="button1">Get Value!</button>
+
+	</div>  
+
+	<div class="radio">
+	    
+	    <p>
+
+	    	Choose Your OS:
+
+			<label>
+				<input type="radio" name="os" value="windows" checked="checked">
+				Windows
+			</label>
+
+			<label>
+				<input type="radio" name="os" value="linux">
+				Linux
+			</label>
+
+			<label>
+				<input type="radio" name="os" value="macos">
+				MacOS
+			</label>
+
+			<button id="button2">Get OS!</button>
+
+	    </p>
+
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+
+<head>
+<title>7.6 Метод filter()</title>
+
+<style type="text/css">
+
+  div {
+    width: 100px; height: 100px;
+    margin: 5px; float: left;
+    border: 3px double #369;
+  }
+
+</style>
+
+<script src="jquery-3.3.1.min.js"></script>
+
+<script>
+
+$(function() {
+    
+  $( 'div' ).css( 'background-color', '#f8ebcc' )
+      .filter( '.find' )
+      .css( 'border-color', 'blue' );
+  });
+
+</script>
+</head>
+<body>
+
+  <h1>7.6 Метод filter()</h1>
+
+  <div class="find"></div>
+
+  <div></div>
+
+  <div></div>
+
+  <div></div>
+
+  <div></div>
+
+  <div class="find"></div>
+
+  <div></div>
+
+</body>
+</html>

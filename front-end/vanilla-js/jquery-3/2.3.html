@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<title>2.3 Методите html() и text(): работа със съдържанието на елементите</title>
+
+	<script src="jquery-3.3.1.min.js"></script>
+	<script>
+		$(function (){
+
+			var txt = $('#hello').text();
+			
+			var html = $('#hello').html();
+
+			console.log('Text: ' + txt);
+
+			console.log('HTML: ' + html);
+
+		});
+	</script>
+
+</head>
+<body>
+
+	<h1>2.3 Методите html() и text(): работа със съдържанието на елементите</h1>
+
+	<div id="hello">Hello <b>world!</b></div>
+
+</body>
+</html>

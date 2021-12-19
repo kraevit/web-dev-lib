@@ -1,0 +1,38 @@
+<!doctype html>
+<html">
+<head>
+  <meta charset="utf-8">
+  <title>6.3 Промяна на HTML оформлението</title>
+
+  <script src="jquery-3.3.1.min.js"></script>
+
+  <script>
+
+    $(function (){
+        
+      $( 'button' ).click(function (){
+
+        $( 'a' ).wrapInner( '<i></i>' ).wrap( '<li></li>' );
+
+        $( 'li' ).wrapAll( '<ol></ol>' );
+
+      });      
+
+    });
+
+  </script>
+</head>
+<body>
+
+  <h1>6.3 Промяна на HTML оформлението</h1>
+
+  <a href="#">Link 1</a>
+  <a href="#">Link 2</a>
+  <a href="#">Link 3</a>
+  <a href="#">Link 4</a>
+  <a href="#">Link 5</a>
+
+  <button>Press me</button>
+  
+</body>
+</html>

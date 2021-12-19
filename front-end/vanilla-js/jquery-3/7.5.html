@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<title>7.5 Метод find()</title>
+
+<style>
+  p, div {
+    margin: 10px; padding: 10px;
+    border: 1px solid #ccc;
+  }
+</style>
+
+<script src="jquery-3.3.1.min.js"></script>
+
+<script type="text/javascript">
+
+  $(function() {
+
+   $( 'p, div' )
+    .find( 'span' )
+    .css( 'background-color', 'yellow' ) 
+
+  });
+</script>
+</head>
+<body>
+
+<h1>7.5 Метод find()</h1>
+
+<p>Some <span>text</span></p>
+
+<div>Hello <span>World</span></div>
+
+</body>
+</html>

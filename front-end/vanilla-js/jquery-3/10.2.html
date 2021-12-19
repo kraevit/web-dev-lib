@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>10.2 Функция extend()</title>
+
+  <script src="jquery-3.3.1.min.js"></script>
+  <script>
+      
+      $(function (){
+
+        var empty = {};
+        var defaults = { validate: false, limit: 5, name: 'foo' };
+        var options = { validate: true, foo: 'bar' }
+
+        var settings = $.extend(empty, defaults, options);
+
+        $.each(settings, function(n, val){
+
+          $( 'body' ).append( '<p>' + n + ': ' + val + '</p>' );
+
+        });
+
+      });
+
+  </script>
+</head>
+<body>
+  <h1>10.2 Функция extend()</h1>
+</body>
+</html>

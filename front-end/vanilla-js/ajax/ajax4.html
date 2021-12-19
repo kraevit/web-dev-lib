@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Ajax 4- AJAx and PHP Forms</title>
+</head>
+<body>
+<button id="btn" type="button">Get Name</button>
+<hr>
+<h1>GET FORM</h1>
+<form method="GET" action="process.php">
+  <input type="text" name="name">
+  <input type="submit" name="Submit">
+</form>
+
+<h1>AJAX GET FORM</h1>
+<form id="getForm">
+  <input type="text" name="name" id="name1">
+  <input type="submit" name="Submit">
+</form>
+
+<script>
+
+document.getElementById("btn").addEventListener("click", getName);
+document.getElementById("getForm").addEventListener("submit", getName);
+
+function getName(e) {
+  e.preventDefault();
+  var name = document.getElementById("name1").value;
+
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "process.php?name=Kraev" + name, true);
+  xhr.onload = function() {
+    console.log(this.responseText);
+  }
+  xhr.send();
+}
+
+</script>
+</body>
+</html>

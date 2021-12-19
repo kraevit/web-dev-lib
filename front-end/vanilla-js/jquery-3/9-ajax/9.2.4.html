@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+   <title>9.2.4 Зареждане и изпълнение на JS файлове</title>
+</head>
+<body>
+
+   <h1>9.2.4 Зареждане и изпълнение на JS файлове</h1>
+
+   <div></div>
+   <button>Run local JS File</button>
+   <button>Run remote JS File</button>
+
+   <script src="../jquery-3.3.1.min.js"></script>
+
+   <script>
+
+         // 9.2.4 Зареждане и изпълнение на JS файлове
+
+         // $.getScript(url, [success(data, textStatus)])
+
+         $(function() {
+
+            $('button:eq(0)').click(function (){
+
+               $.getScript('test.js');
+
+            });
+            
+            $('button:eq(1)').click(function (){
+
+               $.getScript(
+
+               'https://kraevit/ajax/test.js',
+
+                  function(){
+                     console.log('After');
+                  }
+
+               );
+
+            });
+
+         });
+
+   </script>
+
+</body>
+</html>

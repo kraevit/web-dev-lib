@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<title>7.3 Търсене на родителски и дъщерни елементи parent() children()</title>
+
+<style type="text/css">
+  div {
+    width: 400px; padding: 10px;
+    margin: 10px; border: 2px solid #ccc;
+  }
+
+  p {
+    background: 2px solid #ccc; padding: 0 5px;
+    background-color: #ddd;
+  }
+</style>
+
+<script src="jquery-3.3.1.min.js"></script>
+
+<script type="text/javascript">
+
+  $(function() {
+
+
+    $( '#main' ).parent().css( 'border-color', '#f00' );
+
+    $( '#main' ).children( 'span' ).css( 'background-color', '#0c0' );
+
+  });
+
+</script>
+</head>
+<body>
+  
+  <h1>7.3 Търсене на родителски и дъщерни елементи parent() children()</h1>
+
+  <p>Outside div</p>
+
+  <div>
+
+    <p>Inside div</p>
+
+    <p id="main"><em>Paragraph</em> <strong>strong</strong> <span>span</span> some text</p>
+
+    <p>Inside div</p>
+
+  </div>
+
+  <p>Outside div</p>
+
+</body>
+</html>

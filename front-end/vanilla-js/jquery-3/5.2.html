@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Глава 5. Работа с данни</title>
+  <style type="text/css">
+
+</style>
+<script src="jquery-3.3.1.min.js"></script>
+
+<script type="text/javascript">
+
+  $(function (){
+
+    $( 'p' ).hover(
+
+      function(){
+
+        var first = $( 'p' ).data( 'first' );
+
+        var second = $( 'p' ).data( 'second' );
+
+        window.alert( first + ' ' + second );
+
+      },
+
+      function(){ 
+
+        $('p').empty();
+
+      }
+    );
+  });
+</script>
+</head>
+<body>
+  <h1>Атрибутът data</h1>
+
+  <p data-first="1" data-second="2">Data</p>
+
+</body>
+</html>

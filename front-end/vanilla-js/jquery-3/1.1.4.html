@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<title>Пример 1.4. Избор на няколко елемента</title>
+
+	<script 
+		type="text/javascript"
+		src="jquery-3.3.1.min.js">
+			
+		</script>
+
+	<script type="text/javascript">
+		
+		$( document ).ready( function (){
+
+
+			// by class
+
+			// $('.text').css('border', '1px solid #f00');
+
+			// more than one
+			
+			$('div, p.text').css('border', '3px solid #f00')
+
+
+		});
+
+	</script>
+</head>
+
+<body>
+
+	<h1>Пример 1.4. Избор на няколко елемента</h1>
+
+	<div>Hello 1</div>
+	<div>Hello 2</div>
+	<p class="text">Text</p>
+	<ul class="text">
+		<li>Item 1</li>
+	</ul>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<title>7.7 Метод is()</title>
+
+<style>
+  div {
+    width: 100px; height: 100px;
+    margin: 5px; float: left;
+    border: 3px double #369;
+  }
+</style>
+
+<script src="jquery-3.3.1.min.js"></script>
+
+<script type="text/javascript">
+
+$(function() {
+
+  $("div").click(function(){
+
+    if ( $(this).is(".find") )
+
+    {
+
+      alert("Div has 'find' class");
+
+    }
+
+    else if ( $(this).is("#fourth, #first"))
+
+    {
+
+      alert("Div has id #first or #fourth");
+
+    }
+    
+  });
+
+});
+</script>
+</head> 
+<body>
+
+  <h1>7.7 Метод is()</h1>
+
+  <div id="first">1</div>
+
+  <div id="second" class="find">2</div>
+
+  <div id="third">3</div>
+
+  <div id="fourth">4</div>
+
+  <div id="fift" class="find">5</div>
+
+  <div id="sixth">6</div>
+
+</body>
+</html>

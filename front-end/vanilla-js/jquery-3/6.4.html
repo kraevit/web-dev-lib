@@ -1,0 +1,45 @@
+<!doctype html>
+<html">
+<head>
+  <meta charset="utf-8">
+  <title>6.4 Метод unwrap()</title>
+
+  <script src="jquery-3.3.1.min.js"></script>
+
+  <script>
+
+    $(function (){
+        
+      $( '#button1' ).click(function (){
+
+        $( 'a' ).wrapInner( '<i></i>').wrap( '<li></li>' );
+
+        $( 'li' ).wrapAll( '<ol></ol>' ); // wrapAll() not wrap()
+
+      });
+
+      $( '#button2' ).click(function() {
+
+        $( 'a' ).unwrap();
+
+      });
+
+    });
+
+  </script>
+</head>
+<body>
+
+  <h1>6.4 Метод unwrap()</h1>
+
+  <a href="#">Link 1</a>
+  <a href="#">Link 2</a>
+  <a href="#">Link 3</a>
+  <a href="#">Link 4</a>
+  <a href="#">Link 5</a>
+
+  <button id="button1">Wrap</button>
+  <button id="button2">Unwrap</button>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+
+<!doctype html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <title>Метод animate(): проста анимация</title>
+
+  <style>
+
+    .circle {
+      position: absolute;
+      display: inline-block;
+      width: 150px;
+      height: 150px;
+      background-color: red;
+      border-radius: 50%;
+      margin-top: 30px;
+    }
+
+  </style>
+  <script src="jquery-3.3.1.min.js"></script>
+
+  <script>
+
+    $(function (){
+
+      $("#right").click(function(){
+
+        $(".circle").animate({"left": "+=30px"}, "slow");
+
+      });
+
+      $("#left").click(function(){
+
+        $(".circle").animate({"left": "-=30px"}, "slow");
+
+      });
+
+      $("#up").click(function(){
+
+        $(".circle").animate({"top": "-=30px"}, "slow");
+
+      });
+
+      $("#down").click(function(){
+
+        $(".circle").animate({"top": "+=30px"}, "slow");
+
+      });
+
+    });
+  </script>
+</head>
+
+<body>
+
+  <h1>Метод animate(): проста анимация</h1>
+
+  <button id="left">Left</button>
+
+  <button id="right">Right</button>
+
+  <button id="up">Up</button>
+
+  <button id="down">Down</button>
+
+  <br>
+  
+  <div class="circle"></div>
+
+</body>
+</html>

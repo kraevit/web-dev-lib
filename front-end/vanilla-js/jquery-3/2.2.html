@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<title>2.2 Методите addClass(), removeClass(): работа със стилове</title>
+	<style>
+		* { 
+			margin: 1em; 
+		}
+		
+		div { 
+			border: 2px solid #f00; 
+		}
+		
+		.c11 {
+		 	background-color: #0f0; 
+		 	color: #fff; 
+		}
+	</style>
+	<script src="jquery-3.3.1.min.js"></script>
+	<script>
+
+		$(function (){
+
+			$('#button1').click(function (){
+				$('div').addClass('c11');
+			});
+
+			$('#button2').click(function (){
+				$('div').removeClass('c11');
+			});
+
+			$('#button3').click(function (){
+				$('div').toggleClass('c11');
+			});
+
+			$('#button4').click(function (){
+				console.log($('div:last').hasClass('c11'));
+			});
+
+		});
+
+	</script>
+</head>
+<body>
+
+	<h1>2.2 Методите addClass(), removeClass(): работа със стилове</h1>
+
+	<div>Div 1</div>
+	<div>Div 2</div>
+	<div>Div 3</div>
+
+	<button id="button1">addClass</button>
+	<button id="button2">removeClass</button>
+	<button id="button3">toggleClass</button>
+	<button id="button4">hasClass</button>
+
+</body>
+</html>

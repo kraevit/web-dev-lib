@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+
+	<head>
+
+	<meta charset="utf-8">
+
+	<title>3.3 Методите fadeIn(), fadeOut() и fadeToggle(): затихване</title>
+
+	<style type="text/css">
+
+	  .text { 
+	  	background-color: purple; 
+	  	padding: 1em; 
+	  	color: #fff; 
+	  	margin-top: 1em;
+	  }
+
+	</style>
+
+	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+
+	<script type="text/javascript">
+
+		$(function (){
+
+		  $('#show').click(function (){
+
+		    $('.text').fadeIn(1000);
+
+		  });
+
+		  $('#hide').click(function (){
+
+		    $('.text').fadeOut(1000);
+
+		  });
+
+		  $('#toggle').click(function (){
+
+		    $('.text').fadeToggle(1000);
+
+		  });
+
+		});
+	</script>
+	</head>
+<body>
+
+<h1>3.3 Методите fadeIn(), fadeOut() и fadeToggle(): затихване</h1>
+
+	<button id="show">Show</button>
+
+	<button id="hide">Hide</button>
+
+	<button id="toggle">Toggle</button>
+
+	<div class="text">
+
+	  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+	</div>
+
+</body>
+</html>

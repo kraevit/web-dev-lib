@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<title>9.2.1 Зареждане на страница. Метод load()</title>
+<style>
+	div {
+		width: 800px; height: 600px;
+		padding: 10px; margin: 0;
+		border: 3px double #369;
+		overflow: auto;
+	}
+</style>
+</head>
+<body>
+
+	<h1>9.2.1 Зареждане на страница. Метод load()</h1>
+
+	<div id="target"></div>
+
+	<button>Load</button>
+
+	<button>Clear</button>
+
+	<script src="../jquery-3.3.1.min.js"></script>
+
+	<script>
+
+		$(function (){
+
+			// load(url, [data], [complete(responseText, textStatus, XMLHttpRequest)])
+
+			// Зареждане на страница
+
+			$('button:first').click(function (){
+
+				$('#target').load('test.html'); // output: Access to XMLHttpRequest at 'file:///C:/test.html' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: http, data, chrome, chrome-extension, https
+
+			});
+
+
+			$('button:last').click(function (){
+
+				$('#target').empty();
+
+			});
+
+			// Зареждане на част от страница
+
+			$('button:first').click(function (){
+
+				$('#target').load('test.html p:last',
+
+					function(){
+
+						console.log('Done');
+
+				});
+
+			});
+
+			$('button:last').click(function() {
+
+				$('#target').empty();
+				
+			});
+
+		});
+	</script>
+
+</body>
+</html>

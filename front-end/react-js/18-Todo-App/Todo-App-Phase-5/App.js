@@ -1,0 +1,30 @@
+import React, { Component } from "react";
+
+import TodoItem from "./TodoItem"; 
+import todosData from "./todosData";
+
+class App extends Component {
+
+  constructor(props) {
+    super(props);
+
+    // LOAD DATA INTO THE STATE! yes!!!@!
+
+    this.state = {
+      // todos: []
+      todos: todosData
+    };
+  }
+
+  render() {
+    const todoItems = 
+      this.state.todos.map(item => <TodoItem key={item.id} item={item} />);
+    return (
+      <div className="todo-list">
+        {todoItems}
+      </div>
+    );
+  }
+}
+
+export default App;

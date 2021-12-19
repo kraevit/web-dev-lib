@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<title>Глава 2. Атрибути на елементите</title>
+
+</head>
+<body>
+	
+<h1>Глава 2. Атрибути на елементите</h1>
+
+<pre>
+
+$( 'a' ).attr( 'href', 'https://kraevit.tech' )
+
+var href = $( 'a' ).attr( 'href' )
+
+$( 'a' ).attr({
+  'title': 'Click Me!',
+  'href': 'https://google.com'
+})
+
+$( 'a' ).removeAttr( 'title' )
+
+$( 'div' ).addClass( 'c11' )
+$( 'div' ).removeClass( 'c11' )
+$( 'div' ).toggleClass( 'c11' )
+$( 'div' ).hasClass( 'c11' ))
+ 
+var txt = $( '#hello' ).text()
+var html = $( '#hello' ).html()
+
+var firstName = $('#fname').val()
+var osType = $(':radio[name=os]:checked').val()
+
+</pre>	
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<title>1.4 Селектори на атрибути</title>
+
+	<script 
+		type="text/javascript"
+		src="jquery-3.3.1.min.js">
+			
+		</script>
+
+	<script type="text/javascript">
+		
+		$( document ).ready( function (){
+
+			$('div[id]').css({
+				'border-color': '#f00',
+				'color': '#ff0'
+			});
+
+			// equal
+
+			$('div[id="myvalue"]').css({
+				'border-color': '#f00',
+				'color': '#ff0'
+			});
+
+			// not equal
+
+			$('div[id!="myvalue"]').css({
+				'border-color': '#f00',
+				'color': '#ff0'
+			});
+
+			// starts with
+
+			$('div[id^="value"]').css({
+				'border-color': '#f00',
+				'color': '#ff0'
+			});
+
+			// ends with
+			
+			$('div[id$="value"]').css({
+				'border-color': '#f00',
+				'color': '#ff0'
+			});
+
+		});
+
+	</script>
+</head>
+
+<body>
+
+	<h1>1.4 Селектори на атрибути</h1>
+
+
+</body>
+</html>
